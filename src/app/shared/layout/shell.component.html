@@ -1,0 +1,15 @@
+<header class="topbar">
+  <span class="brand">Slate</span>
+</header>
+
+<main class="content">
+  <router-outlet />
+</main>
+
+<nav class="bottom-nav" aria-label="Navegação principal">
+  @for (item of nav; track item.path) {
+    <a [routerLink]="item.path" routerLinkActive="active" ariaCurrentWhenActive="page">{{
+      item.label
+    }}</a>
+  }
+</nav>
